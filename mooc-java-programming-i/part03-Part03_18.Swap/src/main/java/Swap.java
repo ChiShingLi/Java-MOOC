@@ -3,6 +3,12 @@ import java.util.Scanner;
 
 public class Swap {
 
+    public static void swapHelper(int[] array, int index1, int index2) {
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int[] array = new int[5];
@@ -22,6 +28,12 @@ public class Swap {
         // Implement here
         // asking for the two indices
         // and then swapping them
+        System.out.println("Give two indices to swap:");
+        int index1 = Integer.valueOf(scanner.nextLine());
+        int index2 = Integer.valueOf(scanner.nextLine());
+
+        //swap
+        swapHelper(array, index1, index2);
 
         System.out.println("");
         index = 0;
